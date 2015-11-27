@@ -52,8 +52,20 @@ public class AABB02A {
      * 推荐链接
      */
     private String AABB02A110;
+    /*
+     * 注册时间
+     */
+    private String AABB02A120;
 
-    public String getAABB02A010() { 
+    public String getAABB02A120() {
+		return AABB02A120;
+	}
+
+	public void setAABB02A120(String aABB02A120) {
+		AABB02A120 = aABB02A120;
+	}
+
+	public String getAABB02A010() { 
         return AABB02A010;
     }
 

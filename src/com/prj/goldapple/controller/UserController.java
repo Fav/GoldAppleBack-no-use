@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.prj.goldapple.bean.AABB02A;
 import com.prj.goldapple.service.IUserService;
 
 @Controller
@@ -28,7 +29,9 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping("getJSON")
 	public Map<String, Object> getJSON(String userId) {
-
+		AABB02A aabb02a = new AABB02A();
+		aabb02a.setAABB02A010("hah");
+		userService.create(aabb02a);
 		return new HashMap<String, Object>();
 	}
 }
