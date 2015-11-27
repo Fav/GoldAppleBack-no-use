@@ -85,7 +85,7 @@ public class EmpController {
 	}
 	@ResponseBody
 	@RequestMapping("getJSON")
-	public Map<String, Object> getJSON(String empId){
+	public Map<String, Object> getJSON(){
 		List<EmpBean> empList = empService.doGetEmpList();
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("a", 100);
