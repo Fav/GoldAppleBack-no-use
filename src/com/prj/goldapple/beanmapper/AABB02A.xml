@@ -38,20 +38,20 @@
 	<update id="update" parameterType="com.prj.goldapple.bean.AABB02A">
 		update AABB02A
 		<set>
-         <if test="AABB02A010 != null">and AABB02A010 = #{AABB02A010} </if>
-         <if test="AABB02A020 != null">and AABB02A020 = #{AABB02A020} </if>
-         <if test="AABB02A030 != null">and AABB02A030 = #{AABB02A030} </if>
-         <if test="AABB02A040 != null">and AABB02A040 = #{AABB02A040} </if>
-         <if test="AABB02A050 != null">and AABB02A050 = #{AABB02A050} </if>
-         <if test="AABB02A060 != null">and AABB02A060 = #{AABB02A060} </if>
-         <if test="AABB02A070 != null">and AABB02A070 = #{AABB02A070} </if>
-         <if test="AABB02A080 != null">and AABB02A080 = #{AABB02A080} </if>
-         <if test="AABB02A090 != null">and AABB02A090 = #{AABB02A090} </if>
-         <if test="AABB02A100 != null">and AABB02A100 = #{AABB02A100} </if>
-         <if test="AABB02A110 != null">and AABB02A110 = #{AABB02A110} </if>
-         <if test="AABB02A120 != null">and AABB02A120 = #{AABB02A120} </if>
+         <if test="AABB02A010 != null">AABB02A010 = #{AABB02A010},</if>
+         <if test="AABB02A020 != null">AABB02A020 = #{AABB02A020},</if>
+         <if test="AABB02A030 != null">AABB02A030 = #{AABB02A030},</if>
+         <if test="AABB02A040 != null">AABB02A040 = #{AABB02A040},</if>
+         <if test="AABB02A050 != null">AABB02A050 = #{AABB02A050},</if>
+         <if test="AABB02A060 != null">AABB02A060 = #{AABB02A060},</if>
+         <if test="AABB02A070 != null">AABB02A070 = #{AABB02A070},</if>
+         <if test="AABB02A080 != null">AABB02A080 = #{AABB02A080},</if>
+         <if test="AABB02A090 != null">AABB02A090 = #{AABB02A090},</if>
+         <if test="AABB02A100 != null">AABB02A100 = #{AABB02A100},</if>
+         <if test="AABB02A110 != null">AABB02A110 = #{AABB02A110},</if>
+         <if test="AABB02A120 != null">AABB02A120 = #{AABB02A120},</if>
 		</set>
-		where AABB02A010 = #AABB02A010#
+		where AABB02A010 = #{AABB02A010}
 	</update>
 
 	<!-- delete domain -->
@@ -78,7 +78,7 @@
 	</sql>
 
 	<!-- query domain -->
-	<select id="query_list" resultMap="BaseResultMap" parameterType="java.util.HashMap">
+	<select id="queryForList" resultMap="BaseResultMap" parameterType="java.util.HashMap">
 		select
 		<include refid="allColumn" />
 		from AABB02A
@@ -99,7 +99,7 @@
 		select
 		<include refid="allColumn" />
 		from AABB02A
-		where AABB02A010 = #AABB02A010#
+		where AABB02A010 = #{AABB02A010}
 	</select>
 
 </mapper>
