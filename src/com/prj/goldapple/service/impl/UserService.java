@@ -68,7 +68,7 @@ public class UserService implements IUserService {
 	 * @param params
 	 * @return
 	 */
-	public List  queryForList(Map<String, Object> params) {
+	public List<AABB02A>  queryForList(Map<String, Object> params) {
 		return userDao.queryForList(params);
 	}
 
