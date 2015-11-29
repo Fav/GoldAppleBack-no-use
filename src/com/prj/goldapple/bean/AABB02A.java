@@ -56,8 +56,20 @@ public class AABB02A {
      * 注册时间
      */
     private String AABB02A120;
+    /*
+     * 用户类型
+     */
+    private AABB01A AABB01A;
 
-    public String getAABB02A120() {
+    public AABB01A getAABB01A() {
+		return AABB01A;
+	}
+
+	public void setAABB01A(AABB01A aABB01A) {
+		AABB01A = aABB01A;
+	}
+
+	public String getAABB02A120() {
 		return AABB02A120;
 	}
 

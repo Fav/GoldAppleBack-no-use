@@ -3,6 +3,7 @@
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,6 +35,21 @@ public class UserController {
 		aabb02a.setAABB02A010(userId);
 		userService.create(aabb02a);
 		return new HashMap<String, Object>();
+	}
+	@ResponseBody
+	@RequestMapping("create")
+	public AABB02A create() {
+		AABB02A aabb02a = new AABB02A();
+		aabb02a.setAABB02A010(UUID.randomUUID().toString());
+		aabb02a.setAABB02A020(1);
+		aabb02a.setAABB02A030("gy");
+		aabb02a.setAABB02A040("admin");
+		aabb02a.setAABB02A050("12345");
+		aabb02a.setAABB02A060("gy@qq.com");
+		aabb02a.setAABB02A070("13912345678");
+		userService.create(aabb02a);
+		
+		return aabb02a;
 	}
 	@ResponseBody
 	@RequestMapping("retrive")

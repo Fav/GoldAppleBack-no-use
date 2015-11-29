@@ -3,18 +3,19 @@
 <mapper namespace="com.prj.goldapple.dao.UserDao">
 	<!-- result map -->
 	<resultMap id="BaseResultMap" type="com.prj.goldapple.bean.AABB02A">
-           <id property="AABB02A010" column="AABB02A010" />
-           <id property="AABB02A020" column="AABB02A020" />
-           <id property="AABB02A030" column="AABB02A030" />
-           <id property="AABB02A040" column="AABB02A040" />
-           <id property="AABB02A050" column="AABB02A050" />
-           <id property="AABB02A060" column="AABB02A060" />
-           <id property="AABB02A070" column="AABB02A070" />
-           <id property="AABB02A080" column="AABB02A080" />
-           <id property="AABB02A090" column="AABB02A090" />
-           <id property="AABB02A100" column="AABB02A100" />
-           <id property="AABB02A110" column="AABB02A110" />
-           <id property="AABB02A120" column="AABB02A120" />
+       <id property="AABB02A010" column="AABB02A010" />
+       <id property="AABB02A020" column="AABB02A020" />
+       <id property="AABB02A030" column="AABB02A030" />
+       <id property="AABB02A040" column="AABB02A040" />
+       <id property="AABB02A050" column="AABB02A050" />
+       <id property="AABB02A060" column="AABB02A060" />
+       <id property="AABB02A070" column="AABB02A070" />
+       <id property="AABB02A080" column="AABB02A080" />
+       <id property="AABB02A090" column="AABB02A090" />
+       <id property="AABB02A100" column="AABB02A100" />
+       <id property="AABB02A110" column="AABB02A110" />
+       <id property="AABB02A120" column="AABB02A120" />
+       <association property="AABB01A" column="AABB02A020" select="getUserType" />
 	</resultMap>
 
 	<!-- column fields -->
@@ -97,9 +98,13 @@
 
 	<select id="retrieve" resultMap="BaseResultMap" parameterType="java.lang.String">
 		select
-		<include refid="allColumn" />
-		from AABB02A
-		where AABB02A010 = #{AABB02A010}
+		<include refid="allColumn" /> 
+		from AABB02A,AABB01A 
+		where AABB01A.AABB01A010=AABB02A020 and AABB02A010 = #{AABB02A010}
 	</select>
-
+	<select id="getUserType" resultType="com.prj.goldapple.bean.AABB01A" parameterType="int">
+		select * 
+		from AABB01A 
+		where AABB01A010 = #{AABB01A020}
+	</select>
 </mapper>
