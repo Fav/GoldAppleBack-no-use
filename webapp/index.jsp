@@ -20,6 +20,7 @@
 			<li><a href="view/emp/empaddselective.jsp" target="_blank">添加Emp部分字段信息</a></li>
 			<li><a href="emp/doGetEmpList.do" target="_blank">查询Emp信息</a></li>
 			<li><a href="emp/getJSON.do" target="_blank">json</a></li>
+			<li><a href="user/emaillogin.html" target="_blank">login</a></li>
 		</ul>
 	</body>
 </html>

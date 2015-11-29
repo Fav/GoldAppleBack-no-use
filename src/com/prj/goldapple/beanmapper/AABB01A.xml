@@ -3,7 +3,6 @@
 <mapper namespace="com.prj.goldapple.dao.UserTypeDao">
 	<!-- result map -->
 	<resultMap id="BaseResultMap" type="com.prj.goldapple.bean.AABB01A">
-		
            <id property="AABB01A010" column="AABB01A010" />
            <id property="AABB01A020" column="AABB01A020" />
 	</resultMap>

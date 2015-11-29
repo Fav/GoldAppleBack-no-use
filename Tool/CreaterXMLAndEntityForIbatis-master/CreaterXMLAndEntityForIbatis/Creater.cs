@@ -43,17 +43,17 @@ namespace CreaterXMLAndEntityForIbatis
             string tableDescripe = gc.GetDescripe(sqlPath);
 
             content = content.
-                        Replace("<%className%>", GetClassName(dic)).
-                        Replace("<%allField%>", CreateAllField(list, language, dic)).
-                        Replace("<%classContent%>", CreateClassContent(list, language)).
-                        Replace("<%packageName%>", packageName).
-                        Replace("<%tableName%>", GeneralClass.GetTableName(dic)).
-                        Replace("<%tableVarName%>", GeneralClass.GetTableName(dic).ToLower()).
-                        Replace("<%creater%>", create).
-                        Replace("<%tableDescripe%>", gc.GetDescripe(sqlPath)).
-                        Replace("<%actionName%>", GeneralClass.GetActionName(dic)).
-                        Replace("<%actionVarName%>", GeneralClass.GetActionVarName(dic)).
-                        Replace("<%createTime%>", DateTime.Now.ToString());
+                        Replace("<%className%>", GetClassName(dic)).                                 //
+                        Replace("<%allField%>", CreateAllField(list, language, dic)).                //
+                        Replace("<%classContent%>", CreateClassContent(list, language)).             //
+                        Replace("<%packageName%>", packageName).                                     //
+                        Replace("<%tableName%>", GeneralClass.GetTableName(dic)).                    //AABB02A
+                        Replace("<%tableVarName%>", GeneralClass.GetTableName(dic).ToLower()).       //
+                        Replace("<%creater%>", create).                                              //
+                        Replace("<%tableDescripe%>", gc.GetDescripe(sqlPath)).                       //
+                        Replace("<%actionName%>", GeneralClass.GetActionName(dic)).                  //User
+                        Replace("<%actionVarName%>", GeneralClass.GetActionVarName(dic)).            //user
+                        Replace("<%createTime%>", DateTime.Now.ToString());                          //
             byte[] by = Encoding.Default.GetBytes(content);
             if (language != "JAVA")
             {
