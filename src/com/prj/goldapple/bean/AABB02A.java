@@ -29,7 +29,7 @@ public class AABB02A {
      */
     private String AABB02A050;
     /*
-     * 邮箱
+     * 邮箱 
      */
     private String AABB02A060;
     /*
