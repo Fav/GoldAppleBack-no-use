@@ -48,7 +48,7 @@ public class UserController {
 		aabb02a.setAABB02A060("gy@qq.com");
 		aabb02a.setAABB02A070("13912345678");
 		userService.create(aabb02a);
-		
+		 
 		return aabb02a;
 	}
 	@ResponseBody
